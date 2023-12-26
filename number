@@ -1,0 +1,18 @@
+numbers = []
+
+while True:
+    try:
+        num_input = input('Enter a number or type "done" to finish: ')
+        if num_input == "done":
+            break
+        num = int(num_input)
+        numbers.append(num)
+    except ValueError:
+        print("Please enter a valid numeric value.")
+
+if numbers:  # Check if the list is not empty
+    print('Maximum is', max(numbers))
+    print('Minimum is', min(numbers))
+else:
+    print("No valid numbers were entered.")
+ 
